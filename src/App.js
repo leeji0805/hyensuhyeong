@@ -1,30 +1,21 @@
 import React, { useState } from "react";
-
+import style from "./sccreen.css"
 
 function ImageUploadExample() {
 
-  
   const proverbs=["100%","95%","90%","80%"]
   
   const getRandom = (length) => {
-    
+
     return parseInt(Math.random() * length);
     
     }     
   //파일 미리볼 url을 저장해줄 state
-  
   const [fileImage, setFileImage] = useState("");
-  this.state={
-    prov: "호감도는?"
-  }
-   
 
   // 파일 저장
   const saveFileImage = (e) => {
     setFileImage(URL.createObjectURL(e.target.files[0]));
-    this.setState({
-      prov : proverbs[getRandom(proverbs.length)]
-    }) 
   };
 
   // 파일 삭제
@@ -83,11 +74,11 @@ function ImageUploadExample() {
                 <div class = "inerbox">
                     <div class = "upperbox">
                         <div id="pertext">
-                        {state=""}
+                        {proverbs[getRandom(proverbs.length)]} 
                         </div>
                     </div>
                     <div id="downbox">
-                        {this.state}
+                        
                     </div>
                 </div>
             </div>
